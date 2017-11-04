@@ -8,20 +8,29 @@
         </div>
 
         <div>
-            <p>published: 14.06.2014, 12:14</p>
+            <p>published: 04.11.2017, 12:14</p>
             <h2><a href="">The first post ever</a></h2>
             <p>Joulu tulee.</p>
         </div>
 
         <div>
-            <p>published: 14.06.2014, 12:14</p>
+            <p>published: 04.11.2017, 12:14</p>
             <h2><a href="">The second post ever</a></h2>
             <p>Joulu tulee pian.</p>
         </div>
         <div>
-            <p>published: 14.06.2014, 12:14</p>
+            <p>published: 04.11.2017, 12:14</p>
             <h2><a href="">The third post ever</a></h2>
             <p>Joulu tulee aiemmin kuin arvaatkaan.</p>
         </div>
+
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+
     </body>
 </html>
