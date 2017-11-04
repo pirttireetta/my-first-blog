@@ -1,16 +1,24 @@
+{% load staticfiles %}
 <html>
     <head>
         <title>Pirttireetta's blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Rozha+One" rel="stylesheet">
+
     </head>
     <body>
-        <div>
+        <div class="page-header">
+
             <h1><a href="/">Pirttireetta's Blog</a></h1>
         </div>
 
-        <div>
+        <div class="post">
             <p>published: 04.11.2017, 12:14</p>
             <h2><a href="">The first post ever</a></h2>
             <p>Joulu tulee.</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
 
         <div>
